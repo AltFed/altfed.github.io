@@ -42,3 +42,15 @@ body {
     width: 300px;
     height: auto;
 }
+.header-logo {
+	position: fixed;
+    top: 20px;       /* 20 pixel dal bordo superiore */
+    left: 20px;      /* 20 pixel dal bordo sinistro */
+    z-index: 1000;   /* Assicura che il logo sia sopra gli altri elementi */
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+}
+.header-logo img {
+    width: 100px; /* Era 60px, ora è più piccolo */
+    height: auto;
+    /* ...altre proprietà... */
+}
