@@ -54,3 +54,38 @@ body {
     height: auto;
     /* ...altre proprietà... */
 }
+/* Stile per la navigazione centrata (sulla homepage) */
+.centered-nav-links {
+    margin-top: 10px; /* Spazio tra immagine e link */
+    display: flex; /* Flexbox per disporre i link orizzontalmente */
+    flex-direction: row;
+    gap: 15px; /* Spazio tra i link */
+    justify-content: center; /* Centra i link nel loro contenitore */
+    /* Queste regole verranno sovrascritte da .top-left-nav se la pagina non è l'index */
+}
+
+/* Stile per la navigazione in alto a sinistra (sulle altre pagine) */
+.top-left-nav-links {
+    position: fixed; /* Posiziona l'elemento rispetto alla finestra del browser */
+    top: 20px;       /* 20 pixel dal bordo superiore, come il logo */
+    left: 135px;     /* A destra del logo (es. 20px logo_margin + 60px logo_width + 20px spazio = 100px) */
+    z-index: 999;    /* Assicura che sia sopra il contenuto, ma sotto il logo se si sovrapponessero */
+    display: flex;   /* Usa flexbox per disporre i link orizzontalmente */
+    flex-direction: row;
+    gap: 15px;       /* Spazio tra i link */
+    justify-content: flex-start; /* Allinea i link a sinistra nel contenitore */
+    white-space: nowrap; /* Impedisce ai link di andare a capo se lo spazio è poco */
+}
+
+/* Stili comuni per i link di navigazione (per entrambi i tipi di nav) */
+.centered-nav-links a,
+.top-left-nav-links a {
+    text-decoration: none;
+    color: #000000; /* Colore nero per i link */
+    padding: 5px 8px; /* Un po' di padding per renderli cliccabili più facilmente */
+}
+
+.centered-nav-links a:hover,
+.top-left-nav-links a:hover {
+    text-decoration: underline;
+}
